@@ -35,13 +35,13 @@ public class Vehicle {
         this.avgFuelConsumption = avgFuelConsumption;
     }
 
-    protected double calculateRange(double tankCapacity, double avgFuelConsumption) {
+    protected double calculateRange() {
         return tankCapacity / avgFuelConsumption * 100;
     }
 
     @Override
     public String toString() {
-        return "Zasięg pojazdu: " + calculateRange(tankCapacity, avgFuelConsumption) + " km" +
+        return "Zasięg pojazdu: " + calculateRange() + " km" +
                 ", nazwa: '" + name + '\'' +
                 ", pojemność baku: " + tankCapacity + " litrów" +
                 ", podstawowe średnie spalanie: " + avgFuelConsumption + " l/km";
