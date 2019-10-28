@@ -19,11 +19,11 @@ public class Car extends Vehicle {
 
     @Override
     protected double calculateRange() {
-        return isAirConditionOn ? getTankCapacity() / getTotalFuelConsumption() * 100 : super.calculateRange();
+        return getTankCapacity() / getTotalFuelConsumption() * 100;
     }
 
-    protected double getTotalFuelConsumption() {
-        return (getAvgFuelConsumption() + AIR_CONDITION_FUEL_CONSUMPTION);
+     private double getTotalFuelConsumption() {
+        return (isAirConditionOn ? getAvgFuelConsumption() + AIR_CONDITION_FUEL_CONSUMPTION : getAvgFuelConsumption()) ;
     }
 
     @Override

@@ -22,8 +22,7 @@ public class Truck extends Car {
         return getTankCapacity() / getTotalFuelConsumption() * 100;
     }
 
-    @Override
-    protected double getTotalFuelConsumption() {
+    private double getTotalFuelConsumption() {
         return isAirConditionOn() ? (withoutAirConditionFuelConsumption() + AIR_CONDITION_FUEL_CONSUMPTION) : (withoutAirConditionFuelConsumption());
     }
 
