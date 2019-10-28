@@ -18,11 +18,7 @@ public class Truck extends Car {
     }
 
     @Override
-    protected double calculateRange() {
-        return getTankCapacity() / getTotalFuelConsumption() * 100;
-    }
-
-    private double getTotalFuelConsumption() {
+    protected double getTotalFuelConsumption() {
         return isAirConditionOn() ? (withoutAirConditionFuelConsumption() + AIR_CONDITION_FUEL_CONSUMPTION) : (withoutAirConditionFuelConsumption());
     }
 

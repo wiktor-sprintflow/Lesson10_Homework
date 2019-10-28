@@ -22,7 +22,7 @@ public class Car extends Vehicle {
         return getTankCapacity() / getTotalFuelConsumption() * 100;
     }
 
-     private double getTotalFuelConsumption() {
+     protected double getTotalFuelConsumption() {
         return (isAirConditionOn ? getAvgFuelConsumption() + AIR_CONDITION_FUEL_CONSUMPTION : getAvgFuelConsumption()) ;
     }
 
