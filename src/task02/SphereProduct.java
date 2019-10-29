@@ -5,7 +5,8 @@ class SphereProduct extends Product {
     private double radius;
 
     SphereProduct(double radius) {
-        this.shape = SHAPE;
+        //this.shape = SHAPE;
+        setShape(SHAPE);
         this.radius = radius;
     }
 

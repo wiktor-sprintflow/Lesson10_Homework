@@ -29,9 +29,11 @@ class PackProduct {
 
     Box findBestBox(Product product) {
 
-        if (product.shape.equals(CuboidProduct.getSHAPE())) {
+        //if (product.shape.equals(CuboidProduct.getSHAPE())) {
+        if (product.getShape().equals(CuboidProduct.getSHAPE())) {
             for (int i = 0; i < boxes.length; i++) {
-                if (boxes[i].shape.equals(CuboidBox.getSHAPE())) {
+                //if (boxes[i].shape.equals(CuboidBox.getSHAPE())) {
+                if (boxes[i].getShape().equals(CuboidBox.getSHAPE())) {
                     //cuboid into cuboid
                     if (fitProductIntoBox((CuboidProduct) product, (CuboidBox) boxes[i])) {
                         double difference = remainingVolume((CuboidProduct) product, (CuboidBox) boxes[i]);
@@ -39,7 +41,8 @@ class PackProduct {
                             selectBox(difference, i);
                         }
                     }
-                } else if (boxes[i].shape.equals(CylinderBox.getSHAPE())) {
+                //} else if (boxes[i].shape.equals(CylinderBox.getSHAPE())) {
+                } else if (boxes[i].getShape().equals(CylinderBox.getSHAPE())) {
                     //cuboid into cylinder
                     if (fitProductIntoBox((CuboidProduct) product, (CylinderBox) boxes[i])) {
                         double difference = remainingVolume((CuboidProduct) product, (CylinderBox) boxes[i]);
@@ -53,9 +56,11 @@ class PackProduct {
                 }
             }
 
-        } else if (product.shape.equals(SphereProduct.getSHAPE())) {
+        //} else if (product.shape.equals(SphereProduct.getSHAPE())) {
+        } else if (product.getShape().equals(SphereProduct.getSHAPE())) {
             for (int i = 0; i < boxes.length; i++) {
-                if (boxes[i].shape.equals(CuboidBox.getSHAPE())) {
+                //if (boxes[i].shape.equals(CuboidBox.getSHAPE())) {
+                if (boxes[i].getShape().equals(CuboidBox.getSHAPE())) {
                     //sphere into cuboid
                     if (fitProductIntoBox((SphereProduct) product, (CuboidBox) boxes[i])) {
                         double difference = remainingVolume((SphereProduct) product, (CuboidBox) boxes[i]);
@@ -63,7 +68,8 @@ class PackProduct {
                             selectBox(difference, i);
                         }
                     }
-                } else if (boxes[i].shape.equals(CylinderBox.getSHAPE())) {
+                //} else if (boxes[i].shape.equals(CylinderBox.getSHAPE())) {
+                } else if (boxes[i].getShape().equals(CylinderBox.getSHAPE())) {
                     //sphere into cylinder
                     if (fitProductIntoBox((SphereProduct) product, (CylinderBox) boxes[i])) {
                         double difference = remainingVolume((SphereProduct) product, (CylinderBox) boxes[i]);

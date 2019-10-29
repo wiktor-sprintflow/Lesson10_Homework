@@ -7,7 +7,8 @@ class CuboidProduct extends Product {
     private double height;
 
     CuboidProduct(double baseWidth, double baseLength, double height) {
-        this.shape = SHAPE;
+        //this.shape = SHAPE;
+        setShape(SHAPE);
         this.baseWidth = baseWidth;
         this.baseLength = baseLength;
         this.height = height;

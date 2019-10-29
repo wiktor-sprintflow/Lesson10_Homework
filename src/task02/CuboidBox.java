@@ -7,7 +7,8 @@ class CuboidBox extends Box {
     private double height;
 
     CuboidBox(double baseWidth, double baseLength, double height) {
-        this.shape = SHAPE;
+        //this.shape = SHAPE;
+        setShape(SHAPE);
         this.baseWidth = baseWidth;
         this.baseLength = baseLength;
         this.height = height;
@@ -43,7 +44,7 @@ class CuboidBox extends Box {
 
     @Override
     public String toString() {
-        return "Najbardziej pasujące opakowanie na produkt to prostopadłościan (" + shape + ").\n" +
+        return "Najbardziej pasujące opakowanie na produkt to prostopadłościan (" + getShape()  + ").\n" +
                 "Szerokość podstawy: " + baseWidth + ", Długość podstawy: " + baseLength + ", Wysokość: " + height;
     }
 }

@@ -6,7 +6,8 @@ class CylinderBox extends Box {
     private double height;
 
     CylinderBox(double baseRadius, double height) {
-        this.shape = SHAPE;
+        //this.shape = SHAPE;
+        setShape(SHAPE);
         this.baseRadius = baseRadius;
         this.height = height;
     }
@@ -33,7 +34,7 @@ class CylinderBox extends Box {
 
     @Override
     public String toString() {
-        return "Najbardziej pasujące opakowanie na produkt to walec (" + shape + ").\n" +
+        return "Najbardziej pasujące opakowanie na produkt to walec (" + getShape() + ").\n" +
                 "Promień podstawy: " + baseRadius + ", Wysokość: " + height;
     }
 }
